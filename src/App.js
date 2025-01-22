@@ -2,6 +2,10 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./page/Home";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import MobileRecharge from "./page/MobileRecharge";
+import Bills from "./page/Bills";
+import Insurance from "./page/Insurance";
+import HealthInsurance from "./components/Insurance/HealthInsurance";
 
 
 function App() {
@@ -10,6 +14,9 @@ function App() {
         <Navbar/>
         <Routes>
              <Route path="/" element={<Home/>} />
+             <Route path="/mobile-recharge" element={<MobileRecharge/>} />
+             <Route path="/insurance" element={<Insurance/>} />
+             <Route path="/insurance/Health-Insurance" element={<HealthInsurance/>} />
         </Routes>
         <Footer/>
     </div>

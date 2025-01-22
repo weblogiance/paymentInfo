@@ -1,43 +1,75 @@
-// src/components/Hero.jsx
+
 import React from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+
+// import required modules
+import { Pagination ,Autoplay } from 'swiper/modules';
 
 const Hero = () => {
   return (
-    <div className="bg-white mt-12">
-      {/* Hero Section */}
-      <div className="w-11/12  mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
-        <div className="text-sm text-white font-semibold uppercase tracking-wide bg-[#1B263B] w-fit text-center mx-auto py-2 px-5 rounded-full bg-opacity-90">
-          Paytm Payments Services
+    <div className="mt-16 w-full">
+      <Swiper
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        autoplay
+        speed={3000}
+        loop ="true"
+        modules={[Pagination,Autoplay]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+        <div className=" relative w-full border">
+          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
+           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
+                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
+           </div>
+          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
+                <div className="flex flex-col gap-y-3">
+                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
+                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
+                </div>
+                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
+          </div>
         </div>
-        <h1 className="mt-4 text-7xl max-w-5xl  font-bold text-gray-900 tracking-wide mx-auto ">
-          Unfolding a New Era in Online Payment Acceptance
-        </h1>
-        <p className="mt-4 text-2xl text-[#1B263B] font-semibol leading-8 max-w-2xl mx-auto">
-          Grow your business with the payment gateway that powers India's
-          largest brands.
-        </p>
-        <div className="mt-8">
-          <a
-            href="#"
-            className="px-6 py-3 text-white bg-[#00BFFF] hover:bg-blue-700 rounded-lg text-lg shadow"
-          >
-            Sign Up Now →
-          </a>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className=" relative w-full border">
+          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
+           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
+                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
+           </div>
+          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
+                <div className="flex flex-col gap-y-3">
+                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
+                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
+                </div>
+                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
+          </div>
         </div>
-      </div>
-
-      {/* Image Grid Section */}
-      <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
-      
-          <div className="overflow-hidden">
-            <img
-              src="https://paytmpayments.com/s3assets/images/home/bnr.webp?version=1736962835"
-              alt="Image 1"
-              className="w-full h-full object-cover"
-            />
-        
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className=" relative w-full border">
+          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
+           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
+                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
+           </div>
+          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
+                <div className="flex flex-col gap-y-3">
+                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
+                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
+                </div>
+                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
+          </div>
         </div>
-      </div>
+        </SwiperSlide>
+      </Swiper>
+     
     </div>
   );
 };
