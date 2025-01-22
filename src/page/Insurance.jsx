@@ -118,7 +118,7 @@ const Insurance = () => {
           Download the app
         </button>
       </div>
-    </div>
+      </div>
     </div>
   )
 }

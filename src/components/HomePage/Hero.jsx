@@ -1,75 +1,30 @@
 
 import React from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-
-
-// import required modules
-import { Pagination ,Autoplay } from 'swiper/modules';
+import hero from '../../assets/Photos/cashback.png'
+import hero1 from '../../assets/Photos/Android.svg'
+import hero2 from '../../assets/Photos/Apple.svg'
+import Fillbutton from "../../models/Fillbutton";
 
 const Hero = () => {
   return (
-    <div className="mt-16 w-full">
-      <Swiper
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay
-        speed={3000}
-        loop ="true"
-        modules={[Pagination,Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-        <div className=" relative w-full border">
-          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
-           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
-                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
-           </div>
-          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
-                <div className="flex flex-col gap-y-3">
-                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
-                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
+    <div className="mt-20 w-full">
+        <div className=" w-11/12 mx-auto flex justify-between px-10">
+          
+          <div className="  flex flex-col justify-center gap-y-10 ">
+                <div className="flex flex-col gap-y-2">
+                      <h1 className=" max-w-2xl leading-tight text-6xl font-bold ">Accept payments for your online business at <span className=" text-blue-500"> zero cost</span></h1>
+                      <p className="text-lg font-semibold text-gray-500">Sign up to get up to 50% cashback.</p>
                 </div>
-                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
+                <Fillbutton text="Claim Now" />
           </div>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className=" relative w-full border">
-          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
-           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
-                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
-           </div>
-          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
-                <div className="flex flex-col gap-y-3">
-                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
-                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
+           <div className=" relative  rounded-3xl" style={{background:"rgb(215,226,238)",background:"radial-gradient(circle, rgba(215,226,238,1) 0%, rgba(17,57,103,1) 56%)"}}>
+                <img src={hero} alt=""  className="w-[650px]" />
+                <div className=" absolute bottom-0">
+                      <img src={hero1} alt="" width={200} className=" relative -left-20 bottom-1 cursor-pointer"/>
+                      <img src={hero2} alt="" width={200} className=" relative -left-10 -bottom-5 cursor-pointer"/>
                 </div>
-                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
-          </div>
-        </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className=" relative w-full border">
-          <div className=" absolute w-full h-[60vh] bg-blue-900/50"></div>
-           <div className="flex border w-full max-h-[60vh] overflow-hidden  ">
-                <img src="https://ebz-static.s3.ap-south-1.amazonaws.com/easebuzz-static/upi-payments-link.png" alt="" className="w-full" />
            </div>
-          <div className=" absolute flex flex-col  top-[50%] left-[30%] -translate-x-[50%] -translate-y-[50%] ">
-                <div className="flex flex-col gap-y-3">
-                      <h1 className=" max-w-xl text-4xl font-bold text-[#3e9c7d]">Accept payments for your online business at zero cost</h1>
-                      <p className="text-lg text-green-800 font-semibold">Sign up to get up to 50% cashback.</p>
-                </div>
-                <button className=" text-start mt-5 text-white bg-blue-500 py-2 px-5 rounded-md w-fit tracking-wide capitalize font-bold">claim Now</button>  
-          </div>
         </div>
-        </SwiperSlide>
-      </Swiper>
-     
     </div>
   );
 };

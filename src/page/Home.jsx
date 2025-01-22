@@ -10,14 +10,15 @@ import { PiBank } from 'react-icons/pi';
 import { IoGift } from 'react-icons/io5';
 import { TbMobiledata } from 'react-icons/tb';
 import { FaArrowUp, FaMobileAlt, FaLightbulb, FaShoppingCart, FaSuitcase, FaTh } from "react-icons/fa"
-
+import { FaGifts } from "react-icons/fa6";
+import { LuChartColumnIncreasing } from "react-icons/lu";
 
 
 const service = [
-  { icon: <FaArrowUp className="text-white text-4xl rotate-45" />, label: "Send money" },
+  { icon: <FaGifts className="text-white text-4xl" />, label: "Cashback" },
   { icon: <FaMobileAlt className="text-white text-4xl" />, label: "Mobile recharge" },
   { icon: <FaLightbulb className="text-white text-4xl" />, label: "Utility bill" },
-  { icon: <FaShoppingCart className="text-white text-4xl" />, label: "Shopping" },
+  { icon: <LuChartColumnIncreasing className="text-white text-4xl" />, label: "Finals" },
   { icon: <FaSuitcase className="text-white text-4xl" />, label: "Travel" },
   { icon: <FaTh className="text-white text-4xl" />, label: "And more" },
 ];
@@ -124,39 +125,44 @@ const Home = () => {
   ];
 
   return (
-    <div className='flex flex-col gap-y-10'>
+    <div className='flex flex-col gap-y-8'>
       <Hero />
-      <div className="flex w-11/12 mx-auto flex-wrap justify-center items-center p-4 space-y-4 md:space-y-0 md:space-x-6">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`flex flex-col justify-between items-center w-72 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform`}
-          >
-            <div className="text-4xl mb-4 text-blue-500"><service.icon size={40} /></div>
-            <h3 className="text-lg font-semibold text-center">{service.title}</h3>
-            <div className="text-purple-600 mt-2 flex items-center gap-1">
-              <span>Learn More</span>
-              <span>→</span>
-            </div>
+      <div className="flex w-11/12 mx-auto my-20 flex-wrap justify-center items-center p-4 space-y-4 md:space-y-0 md:space-x-6">
+      {services.map((service, index) => (
+        <div
+          key={index}
+          className={`flex flex-col border justify-between items-center w-72 p-6 bg-white rounded-lg shadow-xl transform hover:scale-105 transition-transform hover:shadow-2xl`}
+        >
+          <div className="text-4xl mb-4 text-blue-500">
+            <service.icon size={40} />
           </div>
-        ))}
-      </div>
-      <div className='flex w-11/12 mx-auto justify-center items-center gap-x-10'>
+          <h3 className="text-lg font-semibold text-center text-gray-800">
+            {service.title}
+          </h3>
+          <div className="text-purple-600 mt-2 flex items-center gap-1 cursor-pointer hover:text-purple-800">
+            <span>Learn More</span>
+            <span>→</span>
+          </div>
+        </div>
+      ))}
+    </div>
+      <div className='flex w-11/12 mx-auto justify-center mb-20 items-center gap-x-10'>
         <div>
-          <h1 className=' text-4xl font-bold tracking-wide mb-10 text-blue-500'>Simple, Fast & Secure</h1>
-          <div className='grid grid-cols-2 gap-5 place-content-center'>
+          <h1 className=' text-xl text-center font-bold tracking-wide mb-10 text-blue-500'>Simple, Fast & Secure</h1>
+          <div className='grid grid-cols-2 mt-20 place-content-center gap-10'>
             {
-              feature.map((app) => (
-                <div className='flex flex-col gap-y-3 p-2'>
-                  <h1 className='text-xl font-semibold tracking-wide'>{app.header}</h1>
-                  <p className=' max-w-sm '>{app.description}</p>
+              feature.map((app,index) => (
+                <div className=' relative flex rounded-2xl  flex-col gap-y-3 p-5 bg-blue-700 text-white shadow-inner border-dashed border'>
+                   <span className=' absolute w-14 h-14 -top-7 -right-7 rounded-full bg-blue-700 items-center justify-center flex text-white font-bold'>0{index + 1}</span>
+                  <h1 className='text-2xl font-bold tracking-wide '>{app.header}</h1>
+                  <p className=' max-w-sm text-yellow-500 '>{app.description}</p>
                 </div>
               ))
             }
           </div>
         </div>
         <div>
-          <video loop AutoPlay='true'>
+          <video loop autoPlay="true" muted>
             <source src='https://www.phonepe.com/webstatic/8548/videos/page/home-fast-secure-v3.mp4' type='video/mp4' />
           </video>
         </div>
@@ -170,7 +176,7 @@ const Home = () => {
             className="flex flex-col items-center gap-y-2 cursor-pointer justify-center mx-auto bg-blue-600 rounded-full w-24 h-24 sm:w-40 sm:h-40 hover:bg-blue-500 transition duration-300"
           >
             {service.icon}
-            <p className="text-white text-sm sm:text-lg mt-2">{service.label}</p>
+            <p className="text-white text-sm sm:text-lg mt-2 font-medium -tracking-tight w-[60%]">{service.label}</p>
           </div>
         ))}
       </div>
