@@ -1,8 +1,10 @@
 // src/components/Navbar.jsx
 import React, { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
@@ -15,24 +17,18 @@ const Navbar = () => {
 
           {/* Links */}
           <div className="hidden md:flex space-x-4 items-center">
-            <a href="#products" className="text-gray-600 hover:text-blue-600">
-              Products
-            </a>
-            <a href="#solutions" className="text-gray-600 hover:text-blue-600">
-              Solutions
-            </a>
-            <a href="#partners" className="text-gray-600 hover:text-blue-600">
-              For Partners
-            </a>
-            <a href="#tools" className="text-gray-600 hover:text-blue-600">
-              Business Tools
-            </a>
-            <a href="#company" className="text-gray-600 hover:text-blue-600">
-              Company
-            </a>
-            <a href="#pricing" className="text-gray-600 hover:text-blue-600">
-              Pricing
-            </a>
+            <Link to="/" className={'"text-gray-600 hover:text-blue-600" ' + (location.pathname === '/' ? 'text-blue-600' : '')}>
+                Home
+            </Link>
+            {/* <Link to="/service" className={`"text-gray-600 hover:text-blue-600" ${location.pathname === '/service' ? 'text-blue-600' : ''}`}>
+                Service
+            </Link> */}
+            <Link to="/aboutus" className={`"text-gray-600 hover:text-blue-600" ${location.pathname === '/aboutus' ? 'text-blue-600' : ''}`}>
+                About Us
+            </Link>
+            <Link to="/contactus" className={`"text-gray-600 hover:text-blue-600" + ${location.pathname === '/contactus' ? 'text-blue-600' : ''}`}>
+                Contact Us
+            </Link>
           </div>
           <div className="flex gap-x-5 items-center">
         

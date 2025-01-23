@@ -6,6 +6,8 @@ import MobileRecharge from "./page/MobileRecharge";
 import Bills from "./page/Bills";
 import Insurance from "./page/Insurance";
 import HealthInsurance from "./components/Insurance/HealthInsurance";
+import Contactus from "./page/Contactus";
+import Aboutus from "./page/Aboutus";
 
 
 function App() {
@@ -16,7 +18,9 @@ function App() {
              <Route path="/" element={<Home/>} />
              <Route path="/mobile-recharge" element={<MobileRecharge/>} />
              <Route path="/insurance" element={<Insurance/>} />
-             <Route path="/insurance/Health-Insurance" element={<HealthInsurance/>} />
+             <Route path="/contactus" element={<Contactus/>} />
+             <Route path="/aboutus" element={<Aboutus/>} />
+             {/* <Route path="/insurance/Health-Insurance" element={<HealthInsurance/>} /> */}
         </Routes>
         <Footer/>
     </div>

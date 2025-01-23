@@ -14,6 +14,7 @@ import { FaGifts } from "react-icons/fa6";
 import { LuChartColumnIncreasing } from "react-icons/lu";
 
 
+
 const service = [
   { icon: <FaGifts className="text-white text-4xl" />, label: "Cashback" },
   { icon: <FaMobileAlt className="text-white text-4xl" />, label: "Mobile recharge" },
@@ -24,6 +25,7 @@ const service = [
 ];
 
 const Home = () => {
+ 
   const services = [
     {
       title: "Recharge",
@@ -127,7 +129,7 @@ const Home = () => {
   return (
     <div className='flex flex-col gap-y-8'>
       <Hero />
-      <div className="flex w-11/12 mx-auto my-20 flex-wrap justify-center items-center p-4 space-y-4 md:space-y-0 md:space-x-6">
+      <div className="flex w-11/12 mx-auto mb-20 flex-wrap justify-center items-center p-4 space-y-4 md:space-y-0 md:space-x-6">
       {services.map((service, index) => (
         <div
           key={index}
