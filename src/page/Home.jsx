@@ -268,17 +268,17 @@ const Home = () => {
   </h1>
 
   {/* Content */}
-  <div>
+  <div className='w-11/12 mx-auto flex flex-col gap-y-5 '> 
     {Simpleuse.map((term, index) => (
       <div
         key={term.id}
-        className={`flex flex-col lg:flex-row items-center mt-20 ${
+        className={`flex flex-col lg:justify-between lg:flex-row items-center mt-20 ${
           index % 2 === 0 ? "lg:flex-row-reverse" : ""
         } gap-10`}
       >
         {/* Text Section */}
-        <div className="flex flex-col gap-y-5 rounded-md border shadow-md p-5 w-full lg:w-1/2">
-          <div className="flex justify-between items-center">
+        <div className="flex flex-col gap-y-5 rounded-md border shadow-md p-5  ">
+          <div className="flex justify-between  items-center">
             <h1 className="text-xl sm:text-2xl font-medium">Phase</h1>
             <span className="text-4xl sm:text-6xl opacity-20">{term.id}</span>
           </div>
@@ -289,7 +289,7 @@ const Home = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2">
+        <div className="max-sm:w-full w-[640px] ">
           <img
             src={term.Photo}
             alt=""
