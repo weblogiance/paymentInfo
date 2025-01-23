@@ -222,15 +222,15 @@ function Contactus() {
             </div>
 
             {/* Steps Section */}
-            <div className="flex flex-col mx-auto items-center justify-center bg-white my-10  ">
-                <div className="w-11/12 mx-auto   p-6  rounded-lg ">
+            <div className="flex flex-col bg-gradient-to-r from-blue-50 to-white mx-auto items-center justify-center   ">
+                <div className="w-11/12 mx-auto   p-6 rounded-lg ">
                     <div className="flex flex-col gap-y-5 mb-20">
                         <h1 className=" text-5xl mx-auto w-full text-center font-bold tracking-wide max-w-4xl leading-tight">How to Install App<span className=" text-blue-500"> Your Device</span></h1>
                         <p className=" text-gray-500 text-center text-lg max-w-xl mx-auto">PhonePe offers you a convenient platform to get or renew your Health Insurance plan. Here are the steps on how you can get a Health Insurance span plan from [App Name]:</p>
                     </div>
-                    <div className="flex w-10/12 mx-auto justify-between  flex-col lg:flex-row gap-24">
+                    <div className="flex lg:w-10/12 w-full mx-auto justify-between  flex-col lg:flex-row gap-24">
                         {/* Steps Navigation */}
-                        <div className=" flex w-[50%] flex-col gap-4">
+                        <div className=" flex lg:w-[50%] w-full flex-col gap-4">
                             <div className="relative h-2 bg-gray-200 rounded-full mb-6">
                                 <div
                                     className="absolute top-0 left-0 h-2 bg-blue-600 rounded-full transition-all duration-300"
@@ -247,7 +247,7 @@ function Contactus() {
                                     onClick={() => handleStepChange(step.id)}
                                 >
                                     <h2 className="font-semibold text-lg text-blue-600">
-                                        Step {step.id}/6
+                                        Step {step.id}/5
                                     </h2>
                                     <p className="text-gray-600">{step.title}</p>
                                 </button>
@@ -255,7 +255,7 @@ function Contactus() {
                         </div>
 
                         {/* Step Details */}
-                        <div className="w-[50%]  items-center justify-center flex flex-col gap-6">
+                        <div className="lg:w-[50%] w-full  items-center justify-center flex flex-col gap-6">
                             {steps.map((step) => (
                                 <div
                                     key={step.id}
@@ -275,9 +275,9 @@ function Contactus() {
                 </div>
             </div>
 
-            <div className="bg-gradient-to-b from-indigo-50 to-white p-4 flex items-center justify-center py-10">
+            <div className=" flex items-center justify-center py-10">
                 {/* Main Banner */}
-                <div className="w-full max-w-7xl mx-auto">
+                <div className="w-full max-w-7xl  mx-auto">
                     <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl overflow-hidden shadow-2xl">
                         <div className="grid md:grid-cols-2 gap-8 p-8 md:p-12 items-center">
                             {/* Left Content */}

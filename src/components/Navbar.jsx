@@ -1,4 +1,3 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -6,51 +5,67 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
       <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between   items-center h-16">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <span className="text-2xl font-bold text-blue-600">Paymet App</span>
+           
+            <span className="text-2xl font-bold text-blue-600">Payment App</span>
           </div>
 
-          {/* Links */}
+          {/* Desktop Links */}
           <div className="hidden md:flex space-x-4 items-center">
-            <Link to="/" className={'"text-gray-600 hover:text-blue-600" ' + (location.pathname === '/' ? 'text-blue-600' : '')}>
-                Home
+            <Link
+              to="/"
+              className={`text-blue-600 hover:text-blue-600 ${
+                location.pathname === "/" ? "text-blue-600 font-bold" : ""
+              }`}
+            >
+              Home
             </Link>
-            {/* <Link to="/service" className={`"text-gray-600 hover:text-blue-600" ${location.pathname === '/service' ? 'text-blue-600' : ''}`}>
-                Service
-            </Link> */}
-            <Link to="/aboutus" className={`"text-gray-600 hover:text-blue-600" ${location.pathname === '/aboutus' ? 'text-blue-600' : ''}`}>
-                About Us
+            <Link
+              to="/aboutus"
+              className={`text-blue-600 hover:text-blue-600 ${
+                location.pathname === "/aboutus" ? "text-blue-600 font-bold" : ""
+              }`}
+            >
+              About Us
             </Link>
-            <Link to="/contactus" className={`"text-gray-600 hover:text-blue-600" + ${location.pathname === '/contactus' ? 'text-blue-600' : ''}`}>
-                Contact Us
+            <Link
+              to="/contactus"
+              className={`text-blue-600 hover:text-blue-600 ${
+                location.pathname === "/contactus"
+                  ? "text-blue-600 font-bold"
+                  : ""
+              }`}
+            >
+              Contact Us
             </Link>
           </div>
-          <div className="flex gap-x-5 items-center">
-        
-            <a
-              href="#signin"
-              className="text-gray-600 hover:text-blue-600"
-            >
+
+          {/* Buttons */}
+          <div className="hidden md:flex gap-x-5 items-center">
+            <a href="#signin" className="text-blue-600 hover:text-blue-600">
               Sign In
             </a>
             <a
               href="#signup"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
             >
               Sign Up
             </a>
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-gray-600 hover:text-blue-600 focus:outline-none"
+              onClick={toggleMenu}
+              className="text-blue-600 hover:text-blue-600 focus:outline-none"
             >
               <svg
                 className="h-6 w-6"
@@ -75,59 +90,65 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <a
-            href="#products"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+      {/* Mobile Menu with Smooth Transition */}
+      <div
+        className={`fixed inset-0 z-40 md:hidden bg-black bg-opacity-50 ${
+          isMenuOpen ? "block" : "hidden"
+        }`}
+        onClick={closeMenu}
+      ></div>
+
+      <div
+        className={`fixed top-0 right-0 w-3/4 h-full bg-white shadow-lg z-50 transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        } transition-transform duration-300 ease-in-out`}
+      >
+        <div className="flex flex-col items-center pt-10 space-y-6">
+          <Link
+            to="/"
+            onClick={closeMenu}
+            className={`text-blue-600 hover:text-blue-600 ${
+              location.pathname === "/" ? "text-blue-600 font-bold" : ""
+            }`}
           >
-            Products
-          </a>
-          <a
-            href="#solutions"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+            Home
+          </Link>
+          <Link
+            to="/aboutus"
+            onClick={closeMenu}
+            className={`text-blue-600 hover:text-blue-600 ${
+              location.pathname === "/aboutus" ? "text-blue-600 font-bold" : ""
+            }`}
           >
-            Solutions
-          </a>
-          <a
-            href="#partners"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+            About Us
+          </Link>
+          <Link
+            to="/contactus"
+            onClick={closeMenu}
+            className={`text-blue-600 hover:text-blue-600 ${
+              location.pathname === "/contactus"
+                ? "text-blue-600 font-bold"
+                : ""
+            }`}
           >
-            For Partners
-          </a>
-          <a
-            href="#tools"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
-          >
-            Business Tools
-          </a>
-          <a
-            href="#company"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
-          >
-            Company
-          </a>
-          <a
-            href="#pricing"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
-          >
-            Pricing
-          </a>
+            Contact Us
+          </Link>
           <a
             href="#signin"
-            className="block px-4 py-2 text-gray-600 hover:text-blue-600"
+            onClick={closeMenu}
+            className="text-blue-600 hover:text-blue-600"
           >
             Sign In
           </a>
           <a
             href="#signup"
-            className="block px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            onClick={closeMenu}
+            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
           >
             Sign Up
           </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

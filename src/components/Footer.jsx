@@ -163,15 +163,15 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between bg-gray-800 py-4">
-       <div className="w-11/12 mx-auto flex justify-between">
+       <div className="w-11/12 mx-auto flex lg:flex-row flex-col  justify-center items-center lg:justify-between">
         <div className="text-center flex items-center text-sm text-gray-500">
             © {new Date().getFullYear()} Your Company, Inc. All rights reserved.
           </div>
-          <div className="flex justify-center items-center gap-x-5">
+          <div className="flex lg:flex flex-col gap-y-2 mt-3 justify-center items-center gap-x-5">
               <h3 className="text-white text-lg font-semibold tracking-wide uppercase">
                 Download  App 
               </h3>
-              <ul className=" flex gap-5">
+              <ul className=" flex lg:flex flex-col gap-5">
                 <li>
                   <a href="#" className="hover:text-white">
                     <img src={Android} alt="" width={100}/>
