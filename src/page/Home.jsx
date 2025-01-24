@@ -16,6 +16,15 @@ import OurBookingservice from '../components/OurBookingservice';
 import { Insurance } from './Insurance';
 import MobileRecharge from './MobileRecharge';
 
+import allservice from '../assets/Photos/allservices-removebg-preview.png'
+import cashback from '../assets/Photos/getcashback-removebg.png'
+import wallet from '../assets/Photos/wallet-removebg-preview.png'
+import language from '../assets/Photos/selectlanguage-removebg-preview.png'
+
+import home from '../assets/Photos/Slash screen.png'
+import signup from '../assets/Photos/Sign up screen.png'
+import login from '../assets/Photos/Log in screen.png'
+import cashback1 from '../assets/Photos/Home screen.png'
 const service = [
   { icon: <FaGifts className="text-white text-4xl" />, label: "Cashback" },
   { icon: <FaMobileAlt className="text-white text-4xl" />, label: "Mobile recharge" },
@@ -47,31 +56,31 @@ const Home = () => {
       id: 1,
       title: "click on app store icon",
 
-      image: "https://www.phonepe.com/webstatic/8556/static/c04962c44b332166c1b9e9264e46b646/7f6e7/RenewHealth_Ins_Web_1%402x.png",
+      image:home,
     },
     {
       id: 2,
       title: "Install the app",
 
-      image: "https://www.phonepe.com/webstatic/8556/static/a73838d472c04d69d057192e5487893b/40ffe/RenewHealth_Ins_Web_2%402x.png",
+      image: "https://i.pinimg.com/736x/b5/2c/ae/b52cae6879e991d1683081de523c2825.jpg",
     },
     {
       id: 3,
       title: "Open the app and Sign in",
 
-      image: "https://www.phonepe.com/webstatic/8556/static/1cb1e458ad2f86a7480ab63fbd89fb58/40ffe/RenewHealth_Ins_Web_4%402x.png",
+      image: signup,
     },
     {
       id: 4,
       title: "login to your account",
 
-      image: "https://www.phonepe.com/webstatic/8556/static/a5eb4a085ce57fcee3071d0eb6298a95/40ffe/RenewHealth_Ins_Web_7%402x.png",
+      image: login,
     },
     {
       id: 5,
       title: "use the app and get the cashback and rewards",
 
-      image: "https://www.phonepe.com/webstatic/8556/static/927e87b7db347f498705a17211a3a7f2/40ffe/RenewHealth_Ins_Web_8%402x.png",
+      image:cashback1,
     },
   ];
 
@@ -127,19 +136,19 @@ const Home = () => {
       id: "01",
       title: "One app for all your payments service.",
       description: "From utility bills, mobile & DTH recharge, sending & requesting money, to paying your credit card bill and insurance premium. You can do all this and more on the PhonePe app.",
-      Photo: "https://www.phonepe.com/images/backgrounds/home/payment2x.png"
+      Photo:allservice
     },
     {
       id: "02",
       title: "Your reward and cashback direct transfer to your bankaccount.",
       description: "Just link your bank account to the PhonePe app and make hassle-free, secure payments directly from your bank account 24/7. Your money is always in your bank, not locked in a wallet.",
-      Photo: "https://www.phonepe.com/images/backgrounds/home/bank-account2x.png"
+      Photo: cashback
     },
     {
       id: "03",
       title: "Multiple payment modes.",
       description: "Choose from options like UPI enabled bank account, PhonePe wallet, Debit and Credit Cards to make seamless payments daily.",
-      Photo: "https://www.phonepe.com/images/backgrounds/home/payment-mode2x.png"
+      Photo: wallet
     }
   ]
 
@@ -295,7 +304,7 @@ const Home = () => {
               </div>
 
               {/* Image Section */}
-              <div className="max-sm:w-full w-[540px] ">
+              <div className="max-sm:w-full w-[340px] ">
                 <img
                   src={term.Photo}
                   alt=""
@@ -400,7 +409,7 @@ const Home = () => {
 
       </div>
       {/* select language Page  */}
-      <div className=" w-11/12 mx-auto  flex flex-col md:flex-row items-center justify-between   p-6">
+      <div className=" w-10/12 mx-auto  flex flex-col md:flex-row items-center justify-between   p-6">
         {/* Left Content Section */}
         <div className="max-w-lg md:mr-8 text-center md:text-left">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -414,10 +423,10 @@ const Home = () => {
         </div>
 
         {/* Right Media Section */}
-        <div className="relative">
+        <div className="relative w-[245px]">
           {/* Image */}
           <img
-            src="https://www.phonepe.com/images/backgrounds/home/language2x.png" // Replace with your image path
+            src={language}// Replace with your image path
             alt="Language Options"
             className="w-64 md:w-96 "
           />
@@ -464,7 +473,7 @@ const Home = () => {
               {steps.map((step) => (
                 <div
                   key={step.id}
-                  className={`transition-opacity duration-500 ease-in-out ${currentStep === step.id ? "opacity-100" : "opacity-0 hidden"
+                  className={`transition-opacity w-[240px] outline outline-4 rounded-md overflow-hidden outline-offset-8 duration-500 ease-in-out ${currentStep === step.id ? "opacity-100" : "opacity-0 hidden"
                     }`}
                 >
 

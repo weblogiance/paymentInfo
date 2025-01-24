@@ -9,7 +9,7 @@ const Hero = () => {
     <div
       className="mt-16 w-full"
       style={{
-        background: "url('https://png.pngtree.com/thumb_back/fh260/back_our/20200701/ourmid/pngtree-cash-back-5-yuan-background-material-image_344250.jpg')",
+        background: "url('')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -21,15 +21,15 @@ const Hero = () => {
           <div className="flex flex-col gap-y-4 max-sm:mt-3">
             <h1 className="max-w-2xl leading-tight lg:leading-[5.5rem] text-3xl lg:text-6xl font-bold">
               Accept payments for your online business at{" "}
-              <span className="text-blue-500 flex px-2 lg:py-5 bg-white rounded-r-full text-2xl lg:text-[3rem] pr-5 lg:pr-10">
+              <span className="text-white flex px-2 lg:py-5 bg-blue-500 rounded-r-full text-2xl lg:text-[3rem] pr-5 lg:pr-10">
                 zero cost And Cashback
               </span>
             </h1>
             <p className="text-base lg:text-lg font-semibold text-red-900">
-              Sign up to get up to 50% cashback.
+              Download to get up to 50% cashback.
             </p>
           </div>
-          <Fillbutton text="Claim Now" />
+          <Fillbutton text="Download Now" />
         </div>
 
         {/* Image Section */}

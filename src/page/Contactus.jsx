@@ -3,7 +3,10 @@ import { Mail, Phone, MapPin, Send, Loader2, Contact } from 'lucide-react';
 import { Apple,Star, Download, Smartphone } from 'lucide-react';
 import Android from '../assets/Photos/Android.svg';
 import AppleStore from '../assets/Photos/Apple.svg';
-
+import home from '../assets/Photos/Slash screen.png'
+import signup from '../assets/Photos/Sign up screen.png'
+import login from '../assets/Photos/Log in screen.png'
+import cashback1 from '../assets/Photos/Home screen.png'
 function Contactus() {
     const [currentStep, setCurrentStep] = useState(1);
 
@@ -20,38 +23,38 @@ function Contactus() {
         setCurrentStep(step);
     };
 
-    const steps = [
-        {
-            id: 1,
-            title: "click on app store icon",
-
-            image: "https://www.phonepe.com/webstatic/8556/static/c04962c44b332166c1b9e9264e46b646/7f6e7/RenewHealth_Ins_Web_1%402x.png",
-        },
-        {
-            id: 2,
-            title: "Install the app",
-
-            image: "https://www.phonepe.com/webstatic/8556/static/a73838d472c04d69d057192e5487893b/40ffe/RenewHealth_Ins_Web_2%402x.png",
-        },
-        {
-            id: 3,
-            title: "Open the app and Sign in",
-
-            image: "https://www.phonepe.com/webstatic/8556/static/1cb1e458ad2f86a7480ab63fbd89fb58/40ffe/RenewHealth_Ins_Web_4%402x.png",
-        },
-        {
-            id: 4,
-            title: "login to your account",
-
-            image: "https://www.phonepe.com/webstatic/8556/static/a5eb4a085ce57fcee3071d0eb6298a95/40ffe/RenewHealth_Ins_Web_7%402x.png",
-        },
-        {
-            id: 5,
-            title: "use the app and get the cashback and rewards",
-
-            image: "https://www.phonepe.com/webstatic/8556/static/927e87b7db347f498705a17211a3a7f2/40ffe/RenewHealth_Ins_Web_8%402x.png",
-        },
-    ]; 
+     const steps = [
+       {
+         id: 1,
+         title: "click on app store icon",
+   
+         image:home,
+       },
+       {
+         id: 2,
+         title: "Install the app",
+   
+         image: "https://i.pinimg.com/736x/b5/2c/ae/b52cae6879e991d1683081de523c2825.jpg",
+       },
+       {
+         id: 3,
+         title: "Open the app and Sign in",
+   
+         image: signup,
+       },
+       {
+         id: 4,
+         title: "login to your account",
+   
+         image: login,
+       },
+       {
+         id: 5,
+         title: "use the app and get the cashback and rewards",
+   
+         image:cashback1,
+       },
+     ];
 
     const [formData, setFormData] = useState({
         name: '',
@@ -258,17 +261,17 @@ function Contactus() {
                         <div className="lg:w-[50%] w-full  items-center justify-center flex flex-col gap-6">
                             {steps.map((step) => (
                                 <div
-                                    key={step.id}
-                                    className={`transition-opacity duration-500 ease-in-out ${currentStep === step.id ? "opacity-100" : "opacity-0 hidden"
-                                        }`}
-                                >
-
-                                    <img
-                                        src={step.image}
-                                        alt={`Step ${step.id}`}
-                                        className="w-full  max-w-sm"
-                                    />
-                                </div>
+                                key={step.id}
+                                className={`transition-opacity w-[240px] outline outline-4 rounded-md overflow-hidden outline-offset-8 duration-500 ease-in-out ${currentStep === step.id ? "opacity-100" : "opacity-0 hidden"
+                                  }`}
+                              >
+              
+                                <img
+                                  src={step.image}
+                                  alt={`Step ${step.id}`}
+                                  className="w-full  max-w-sm"
+                                />
+                              </div>
                             ))}
                         </div>
                     </div>

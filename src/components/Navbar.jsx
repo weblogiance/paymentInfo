@@ -19,7 +19,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-4 items-center">
+          <div className="hidden text-lg md:flex space-x-4 items-center">
             <Link
               to="/"
               className={`text-blue-600 hover:text-blue-600 ${
@@ -49,18 +49,7 @@ const Navbar = () => {
           </div>
 
           {/* Buttons */}
-          <div className="hidden md:flex gap-x-5 items-center">
-            <a href="#signin" className="text-blue-600 hover:text-blue-600">
-              Sign In
-            </a>
-            <a
-              href="#signup"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-            >
-              Sign Up
-            </a>
-          </div>
-
+          
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center">
             <button
@@ -133,20 +122,7 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
-          <a
-            href="#signin"
-            onClick={closeMenu}
-            className="text-blue-600 hover:text-blue-600"
-          >
-            Sign In
-          </a>
-          <a
-            href="#signup"
-            onClick={closeMenu}
-            className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
-          >
-            Sign Up
-          </a>
+
         </div>
       </div>
     </nav>
