@@ -9,19 +9,19 @@ import Apple from '../assets/Photos/Apple.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400 w-full pt-10">
-      <div className="w-11/12 mx-auto px-4 py-20 sm:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
+    <footer className="bg-gray-900 text-gray-400 w-full lg:pt-10">
+      <div className="w-11/12 mx-auto px-4 sm:py-20 py-10 sm:px-6">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           {/* Logo and Description */}
-          <div className="md:col-span-1">
-            <div className="flex items-center space-x-2">
+          <div className="md:col-span-1 max-sm:col-span-2 mx-auto">
+            <div className="flex items-center max-sm:justify-center  space-x-2">
               <div className="text-3xl text-blue-500 font-bold">Payment App</div>
             </div>
-            <p className="mt-4">
+            <p className="mt-4 max-sm:text-center">
               Making the world a better place through constructing elegant
               hierarchies.
             </p>
-            <div className="flex space-x-4 mt-4">
+            <div className="flex space-x-4 mt-4 max-sm:justify-center">
               <a
                 href="#"
                 className="hover:text-white transition-colors duration-300"
