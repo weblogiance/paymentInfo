@@ -204,10 +204,10 @@ const Home = () => {
               <h3 className="text-lg font-semibold text-center text-gray-800">
                 {service.title}
               </h3>
-              <div className="text-purple-600 mt-2 flex items-center gap-1 cursor-pointer hover:text-purple-800">
+              {/* <div className="text-purple-600 mt-2 flex items-center gap-1 cursor-pointer hover:text-purple-800">
                 <span>Learn More</span>
                 <span>→</span>
-              </div>
+              </div> */}
             </div>
           ))}
         </div>
@@ -360,9 +360,9 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                  {/* <button className="mt-6 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                     Select {method.title}
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}

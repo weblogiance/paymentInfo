@@ -125,9 +125,9 @@ function OurBookingservice() {
                         <h3 className="text-xl font-semibold text-gray-800">{service.title}</h3>
                     </div>
                     <p className="text-gray-600">{service.description}</p>
-                    <button className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
+                    {/* <button className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded-lg hover:bg-indigo-700 transition-colors">
                         Book Now
-                    </button>
+                    </button> */}
                     </div>
           </div>
           ))}

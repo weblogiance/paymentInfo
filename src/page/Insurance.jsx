@@ -96,10 +96,10 @@ export function Insurance() {
                   <h3 className="text-xl font-semibold text-gray-800">{type.title}</h3>
                 </div>
                 <p className="text-gray-600">{type.description}</p>
-                <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
+                {/* <button className="mt-4 w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2">
                   Learn More
                   <ArrowRight className="w-4 h-4" />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
