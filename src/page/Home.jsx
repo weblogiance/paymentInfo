@@ -25,6 +25,8 @@ import home from '../assets/Photos/Slash screen.png'
 import signup from '../assets/Photos/Sign up screen.png'
 import login from '../assets/Photos/Log in screen.png'
 import cashback1 from '../assets/Photos/Home screen.png'
+
+import payment from '../assets/Photos/video2.mp4'
 const service = [
   { icon: <FaGifts className="text-white text-4xl" />, label: "Cashback" },
   { icon: <FaMobileAlt className="text-white text-4xl" />, label: "Mobile recharge" },
@@ -236,17 +238,18 @@ const Home = () => {
 
         {/* Right Content (Video Section) */}
         <div className="w-full lg:w-[50%] flex justify-center">
-          <video
+          {/* <video
             className="rounded-lg w-full max-w-lg lg:max-w-full"
             loop
             autoPlay
             muted
           >
             <source
-              src="https://www.phonepe.com/webstatic/8548/videos/page/home-fast-secure-v3.mp4"
+              src={payment}
               type="video/mp4"
             />
-          </video>
+          </video> */}
+          <img src="https://img.freepik.com/free-vector/hands-holding-credit-card-mobile-phone-with-banking-app-person-paying-with-bank-card-transferring-money-shopping-online-flat-vector-illustration-payment-finance-concept_74855-24760.jpg?t=st=1737953315~exp=1737956915~hmac=ac1e0e213dad955813e0525d06a46b417a67863e25fa2570aaabeac96d86432c&w=740" alt="" />
         </div>
       </div>
 

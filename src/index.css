@@ -17,25 +17,7 @@ code {
 }
 
 
-.pattern-grid {
-  background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px);
-  background-size: 20px 20px;
-}
 
-.animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 /* Smooth scrolling */
 html {
@@ -43,67 +25,4 @@ html {
 }
 
 
-.pagination{
-     width:34px;
-     height:34px;
-     background-color: blue;
-     border: 2px solid black;
-}
 
-@keyframes blob {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-  }
-  33% {
-    transform: translate(30px, -50px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-  }
-}
-
-@keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-blob {
-  animation: blob 7s infinite;
-}
-
-.animation-delay-2000 {
-  animation-delay: 2s;
-}
-
-.animation-delay-4000 {
-  animation-delay: 4s;
-}
-
-.app-preview-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.app-preview-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
-  padding: 2rem;
-  transform: translateY(100%);
-  transition: transform 0.3s ease-in-out;
-}
-
-.app-preview-container:hover .app-preview-overlay {
-  transform: translateY(0);
-}

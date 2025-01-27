@@ -1,15 +1,16 @@
 import React from "react";
-import hero from '../../assets/Photos/cashback.png';
+import hero from '../../assets/Photos/Home screen.png';
 import hero1 from '../../assets/Photos/Android.svg';
 import hero2 from '../../assets/Photos/Apple.svg';
 import Fillbutton from "../../models/Fillbutton";
+import Hero2 from "../../assets/Photos/wallet-removebg-preview.png" 
 
 const Hero = () => {
   return (
     <div
       className="mt-16 w-full"
       style={{
-        background: "url('')",
+        background: "url('https://i.pinimg.com/736x/46/da/81/46da81f877b6521253542a5204379475.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -33,13 +34,20 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="relative w-full lg:w-[50%] flex justify-center items-center mt-10 lg:mt-0">
-          <img
-            src={hero}
-            alt="Cashback"
-            className="w-[90%] sm:w-[600px] lg:w-[750px] relative -top-12 lg:-top-24 lg:left-32"
-          />
-          <div className="absolute bottom-10 sm:bottom-24 lg:bottom-24 lg:left-32 flex justify-center items-center gap-5 sm:gap-10">
+        <div className="relative overflow-hidden w-full lg:w-[50%] flex justify-center items-center mt-10 lg:mt-0">
+         <div className=" w-[155px] lg:w-[355px] mb-5">
+            <img
+                src={Hero2}
+                alt="Cashback"
+                className="w-[90%] z-[2] sm:w-[600px] lg:w-[650px] relative  lg:left-32"
+              />
+              <img
+                src={hero}
+                alt="Cashback"
+                className=" absolute w-[120px]  top-10 left-[200px] sm:w-[600px] lg:w-[355px]   lg:left-32"
+              />
+         </div>
+          <div className="absolute bottom-2  sm:bottom-24 lg:bottom-20 z-[2] lg:right-10 flex lg:flex-col justify-center items-center gap-5 sm:gap-10">
             <img
               src={hero1}
               alt="Android"
