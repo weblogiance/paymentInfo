@@ -6,14 +6,16 @@ const App = () => {
     { title: 'Electricity Bills', description: 'Pay your electricity bills easily and securely.', image: 'https://i.pinimg.com/736x/ac/08/73/ac0873b5009b5b23663d5e5228566903.jpg' },
     { title: 'Water Bills', description: 'Quick and hassle-free water bill payments.', image: 'https://i.pinimg.com/736x/09/40/78/094078c356b33df954bdd20fd809af19.jpg' },
     { title: 'Internet Bills', description: 'Stay connected with seamless internet bill payments.', image: 'https://i.pinimg.com/736x/4e/63/86/4e6386b13a53c14cbd596a2d3174f08d.jpg' },
-    { title: 'Gas Bills', description: 'Convenient gas bill payments at your fingertips.', image: 'https://i.pinimg.com/736x/8a/39/52/8a39526f65cea849f178e12d77d6ab75.jpg' }
+    { title: 'Gas Bills', description: 'Convenient gas bill payments at your fingertips.', image: 'https://i.pinimg.com/736x/8a/39/52/8a39526f65cea849f178e12d77d6ab75.jpg' },
+    {title:'OTT Bills',description:'Pay your OTT bills easily and securely.',image:'https://i.pinimg.com/736x/83/50/e5/8350e590f77a630d5b04f5d69b26b47e.jpg'}
   ];
 
   const billFactures = [
     { title: 'Electricity Facture', description: 'View and download detailed electricity bill factures.', image: 'https://i.pinimg.com/736x/32/db/d5/32dbd56a57875922139164f4fdee3a80.jpg' },
     { title: 'Water Facture', description: 'Access comprehensive water bill factures anytime.', image: 'https://i.pinimg.com/236x/c4/3b/73/c43b73b8e893b8156ca34584544ce052.jpg' },
     { title: 'Internet Facture', description: 'Check and keep track of your internet bill factures.', image: 'https://i.pinimg.com/736x/3a/7e/3a/3a7e3ac7eac22a5bc2df81d220b86b84.jpg' },
-    { title: 'Gas Facture', description: 'Stay informed with your gas bill factures easily.', image: 'https://i.pinimg.com/736x/02/dd/60/02dd60a02645b9de5bfb42f3baa7b908.jpg' }
+    { title: 'Gas Facture', description: 'Stay informed with your gas bill factures easily.', image: 'https://i.pinimg.com/736x/02/dd/60/02dd60a02645b9de5bfb42f3baa7b908.jpg' },
+    {title:'OTT Facture',description:'View and download detailed OTT bill factures.',image:'https://i.pinimg.com/736x/30/35/16/303516b3d848265807856338aabd9572.jpg'},
   ];
 
   return (
