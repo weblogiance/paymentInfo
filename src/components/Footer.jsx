@@ -8,6 +8,13 @@ import Android from '../assets/Photos/Android.svg';
 import Apple from '../assets/Photos/Apple.svg';
 
 const Footer = () => {
+  const handleAppStoreClick = () => {
+    window.open('https://apps.apple.com/your-app', '_blank');
+  };
+
+  const handlePlayStoreClick = () => {
+    window.open('https://play.google.com/store/apps/your-app', '_blank');
+  };
   return (
     <footer className="bg-gray-900 text-gray-400 w-full lg:pt-10">
       <div className="w-11/12 mx-auto px-4 sm:py-20 py-10 sm:px-6">
@@ -56,27 +63,27 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-2">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/#Recharge" className="hover:text-white">
                    Recharge
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/#Recharge" className="hover:text-white">
                   Bill Payments
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/#Cashback" className="hover:text-white">
                   Cashback Offers
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/#Insurance" className="hover:text-white">
                   Financial & Tax
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/#Journey" className="hover:text-white">
                   Booking
                 </a>
               </li>
@@ -114,7 +121,7 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-2 ">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="/aboutus" className="hover:text-white">
                   About
                 </a>
               </li>
@@ -124,8 +131,8 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
-                  Jobs
+                <a href="/contactus" className="hover:text-white">
+                  Contact-us
                 </a>
               </li>
               <li>
@@ -173,12 +180,12 @@ const Footer = () => {
               </h3>
               <ul className=" flex lg:flex lg:flex-row flex-col gap-5">
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-white" onClick={handlePlayStoreClick}>
                     <img src={Android} alt="" width={100}/>
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#" className="hover:text-white" onClick={handleAppStoreClick}>
                     <img src={Apple} alt="" width={100}/>
                   </a>
                 </li>

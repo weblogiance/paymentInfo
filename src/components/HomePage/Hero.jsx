@@ -6,6 +6,13 @@ import Fillbutton from "../../models/Fillbutton";
 import Hero2 from "../../assets/Photos/wallet-removebg-preview.png" 
 
 const Hero = () => {
+  const handleAppStoreClick = () => {
+    window.open('https://apps.apple.com/your-app', '_blank');
+  };
+
+  const handlePlayStoreClick = () => {
+    window.open('https://play.google.com/store/apps/your-app', '_blank');
+  };
   return (
     <div
       className="mt-16 w-full"
@@ -52,12 +59,14 @@ const Hero = () => {
               src={hero1}
               alt="Android"
               width={150}
+              onClick={handlePlayStoreClick}
               className="cursor-pointer"
             />
             <img
               src={hero2}
               alt="Apple"
               width={150}
+              onClick={handleAppStoreClick}
               className="cursor-pointer"
             />
           </div>

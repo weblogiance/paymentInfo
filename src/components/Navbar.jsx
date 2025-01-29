@@ -22,7 +22,7 @@ const Navbar = () => {
           <div className="hidden text-lg md:flex space-x-4 items-center">
             <Link
               to="/"
-              className={`text-blue-600 hover:text-blue-600 ${
+              className={`text-gray-600 hover:text-blue-600 ${
                 location.pathname === "/" ? "text-blue-600 font-bold" : ""
               }`}
             >
@@ -30,7 +30,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/aboutus"
-              className={`text-blue-600 hover:text-blue-600 ${
+              className={`text-gray-600 hover:text-blue-600 ${
                 location.pathname === "/aboutus" ? "text-blue-600 font-bold" : ""
               }`}
             >
@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contactus"
-              className={`text-blue-600 hover:text-blue-600 ${
+              className={`text-gray-600 hover:text-blue-600 ${
                 location.pathname === "/contactus"
                   ? "text-blue-600 font-bold"
                   : ""
@@ -82,7 +82,7 @@ const Navbar = () => {
       {/* Mobile Menu with Smooth Transition */}
       <div
         className={`fixed inset-0 z-40 md:hidden bg-black bg-opacity-50 ${
-          isMenuOpen ? "block" : "hidden"
+          isMenuOpen ? "block backdrop-blur-md" : "hidden"
         }`}
         onClick={closeMenu}
       ></div>

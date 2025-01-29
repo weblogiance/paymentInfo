@@ -41,7 +41,7 @@ const benefits = [
 
 export function Insurance() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white" id='Insurance'>
 
       {/* Hero Section */}
       <div className="relative min-h-[600px] w-11/12 mx-auto my-10 overflow-hidden">

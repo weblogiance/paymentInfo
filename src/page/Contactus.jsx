@@ -103,11 +103,11 @@ function Contactus() {
                                     <Mail className="w-6 h-6 text-blue-600 mt-1" />
                                     <div>
                                         <h3 className="font-semibold text-gray-800">Email</h3>
-                                        <p className="text-gray-600">weblogiance@gmail.com</p>
+                                        <p className="text-gray-600"><a href="mailto:weblogiance@gmail.com">weblogiance@gmail.com</a></p>
                                     </div>
                                 </div>
 
-                                <div className="flex items-start space-x-4">
+                                {/* <div className="flex items-start space-x-4">
                                     <Phone className="w-6 h-6 text-blue-600 mt-1" />
                                     <div>
                                         <h3 className="font-semibold text-gray-800">Phone</h3>
@@ -121,7 +121,7 @@ function Contactus() {
                                         <h3 className="font-semibold text-gray-800">Address</h3>
                                         <p className="text-gray-600">C-2 1014 Pragati IT Park Near Sudama Chowk Mota Varachha <br />Surat - 394101.</p>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
 
@@ -299,10 +299,10 @@ function Contactus() {
                                 </p>
 
                                 <div className="flex gap-x-5 ">
-                                    <div>
+                                    <div onClick={handlePlayStoreClick} className="cursor-pointer">
                                         <img src={Android} alt="Android" className='w-[200px]' />
                                     </div>
-                                    <div>
+                                    <div onClick={handleAppStoreClick} className="cursor-pointer">
                                         <img src={AppleStore} alt="Apple Store" className=' w-[200px]' />
                                     </div>
 

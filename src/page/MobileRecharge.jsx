@@ -19,7 +19,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-100 flex flex-col items-center" id='Recharge'>
       {/* Hero Section */}
       <div className="relative w-11/12 mx-auto mt-10 h-[600px] overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-2 p-4">
@@ -103,7 +103,7 @@ const App = () => {
       </section>
 
       {/* Cashback Component */}
-      <section className="w-full py-12 px-6 relative bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200">
+      <section className="w-full py-12 px-6 relative bg-gradient-to-r from-yellow-200 via-red-200 to-pink-200" id='Cashback'>
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Exciting Cashback Offers!</h2>
           <p className="text-lg md:text-xl mb-6">Earn cashback on every bill payment. It's easy and rewarding!</p>

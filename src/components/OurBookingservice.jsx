@@ -59,7 +59,7 @@ const features = [
 
 function OurBookingservice() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50" id='Journey'>
       {/* Hero Section */}
       <div className="relative w-11/12 mx-auto mt-10 h-[600px] overflow-hidden">
         <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-2 p-4">

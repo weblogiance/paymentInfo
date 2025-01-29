@@ -5,6 +5,15 @@ import Android from '../assets/Photos/Android.svg';
 import AppleStore from '../assets/Photos/Apple.svg';
 
 function Aboutus() {
+
+    const handleAppStoreClick = () => {
+        window.open('https://apps.apple.com/your-app', '_blank');
+      };
+    
+      const handlePlayStoreClick = () => {
+        window.open('https://play.google.com/store/apps/your-app', '_blank');
+      };
+
     const features = [
         {
             icon: <Shield className="w-6 h-6" />,
@@ -161,10 +170,10 @@ function Aboutus() {
                                 </p>
 
                                 <div className="flex gap-x-5 ">
-                                    <div>
+                                    <div onClick={handlePlayStoreClick} className='cursor-pointer'>
                                         <img src={Android} alt="Android" className='w-[200px]' />
                                     </div>
-                                    <div>
+                                    <div onClick={handleAppStoreClick} className='cursor-pointer'>
                                         <img src={AppleStore} alt="Apple Store" className=' w-[200px]' />
                                     </div>
 
