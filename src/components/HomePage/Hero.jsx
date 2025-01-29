@@ -27,7 +27,7 @@ const Hero = () => {
         {/* Text Section */}
         <div className="flex flex-col justify-center lg:items-start items-center gap-y-8 lg:gap-y-10 text-center lg:text-left">
           <div className="flex flex-col gap-y-4 max-sm:mt-3">
-            <h1 className="max-w-2xl leading-tight lg:leading-[5.5rem] text-3xl lg:text-6xl font-bold">
+            <h1 className="max-w-2xl leading-tight lg:leading-[5.5rem] text-3xl lg:text-6xl font-bold bg-gradient-to-r from-gray-800 to-blue-200 bg-clip-text text-transparent" >
               Accept payments for your online business at{" "}
               <span className="text-white flex px-2 lg:py-5 bg-blue-500 rounded-r-full text-2xl lg:text-[3rem] pr-5 lg:pr-10">
                 zero cost And Cashback
