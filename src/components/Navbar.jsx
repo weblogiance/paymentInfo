@@ -9,8 +9,8 @@ const Navbar = () => {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-50">
-      <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 left-0 w-full  bg-white shadow-lg z-50">
+      <div className="w-11/12 mx-auto px-4  sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">

@@ -6,6 +6,7 @@ import MobileRecharge from "./page/MobileRecharge";
 
 import Contactus from "./page/Contactus";
 import Aboutus from "./page/Aboutus";
+import HomePage from "./page/HomePage";
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <div>
         <Navbar/>
         <Routes>
-             <Route path="/" element={<Home/>} />
+             {/* <Route path="/" element={<Home/>} />  */}
+              <Route path="/" element={<HomePage/>} />
              <Route path="/mobile-recharge" element={<MobileRecharge/>} />
              {/* <Route path="/insurance" element={<Insurance/>} /> */}
              <Route path="/contactus" element={<Contactus/>} />
