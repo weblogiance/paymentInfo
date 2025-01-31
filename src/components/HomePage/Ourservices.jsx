@@ -2,7 +2,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Whyswitch from "./Whyswitch";
 
@@ -167,7 +167,10 @@ const Ourservices = () => {
                     prevEl: '.prev',
                     nextEl: '.next',
                   }} 
-                  modules={[Navigation]} 
+                  modules={[Navigation,Autoplay]} 
+                  autoplay
+                  speed={500}
+                  loop={true}
                   className="w-full md:w-2/3 mySwiper"
                   >
                     <SwiperSlide >
@@ -231,7 +234,10 @@ const Ourservices = () => {
                     prevEl: '.prev',
                     nextEl: '.next',
                   }} 
-                  modules={[Navigation]}  className="w-full md:w-2/3 mySwiper">
+                  modules={[Navigation,Autoplay]} 
+                  autoplay
+                  speed={500}
+                  loop={true} className="w-full md:w-2/3 mySwiper">
                     <SwiperSlide >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 pb-10 w-full">
                         {item.services.subservices.map((service, idx) => (
@@ -293,7 +299,10 @@ const Ourservices = () => {
                     prevEl: '.prev',
                     nextEl: '.next',
                   }} 
-                  modules={[Navigation]} className="w-full md:w-2/3 mySwiper">
+                  modules={[Navigation,Autoplay]}  
+                  autoplay
+                  speed={500}
+                  loop={true} className="w-full md:w-2/3 mySwiper">
                     <SwiperSlide >
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5 pb-10 w-full">
                         {item.services.subservices.map((service, idx) => (
