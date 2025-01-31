@@ -8,23 +8,22 @@ import { GiTrophyCup } from "react-icons/gi";
 import FillPe from '../components/HomePage/FillPe';
 import Ourservices from '../components/HomePage/Ourservices';
 
-import { FaStar, FaLock, FaExchangeAlt } from "react-icons/fa";
-
+import { FaStar, FaRegStar,FaLock, FaExchangeAlt } from "react-icons/fa";
 import payment from '../assets/Photos/Mobile payments.mp4'
 
 const benefits = [
-  { icon: <FaStar className="text-blue-400 text-2xl" />, title: "One app All Payment service", description: "Pay bills, recharge, send money,invest and shop at your favourite stores." },
-  { icon: <FaLock className="text-blue-400 text-2xl" />, title: "Provide Discount/Cashback", description: "Pay bills, recharge, send money,invest and shop at your favourite stores get up to 80% cashback." },
-  { icon: <FaExchangeAlt className="text-blue-400 text-2xl" />, title: "Faster And More Secure", description: "muti-step authotication of your acccount." },
-  { icon: <FaExchangeAlt className="text-blue-400 text-2xl" />, title: "Provide Wallet System", description: "Add money to app wallet and get a cashback and Withdrawal money to bank-account." },
-  { icon: <FaExchangeAlt className="text-blue-400 text-2xl" />, title: "Transfor Cashback to your Bank", description: "Choose from options like UPI, the PhonePe wallet or your Debit and Credit Card." },
+  { icon: <FaStar className="text-gray-400 text-2xl" />, title: "One app All Payment service", description: "Pay bills, recharge, send money,invest and shop at your favourite stores." },
+  { icon: <FaLock className="text-gray-400 text-2xl" />, title: "Provide Discount/Cashback", description: "Pay bills, recharge, send money,invest and shop at your favourite stores get up to 80% cashback." },
+  { icon: <FaExchangeAlt className="text-gray-400 text-2xl" />, title: "Faster And More Secure", description: "muti-step authotication of your acccount." },
+  { icon: <FaExchangeAlt className="text-gray-400 text-2xl" />, title: "Provide Wallet System", description: "Add money to app wallet and get a cashback and Withdrawal money to bank-account." },
+  { icon: <FaExchangeAlt className="text-gray-400 text-2xl" />, title: "Transfor Cashback to your Bank", description: "Choose from options like UPI, the PhonePe wallet or your Debit and Credit Card." },
 ];
 
 const BenefitCard = ({ icon, title, description }) => (
-  <div className="flex w-fit items-center gap-4 bg-blue-800 p-4 rounded-lg shadow-md">
-    <div className="p-3 bg-blue-900 rounded-full">{icon}</div>
+  <div className="flex w-fit items-center gap-4 bg-gray-800 p-4 rounded-lg shadow-md">
+    <div className="p-3 bg-gray-900 rounded-full">{icon}</div>
     <div>
-      <h3 className="text-lg font-bold text-blue-400">{title}</h3>
+      <h3 className="text-lg font-bold text-white">{title}</h3>
       <p className="text-gray-300 text-sm">{description}</p>
     </div>
   </div>
@@ -59,6 +58,33 @@ const overservie = [
         points:[]
     },
 ]
+
+const advantages = [
+    {
+      title: 'No management fees',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    },
+    {
+      title: 'Personal support',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    },
+    {
+      title: 'Saving your time',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    },
+    {
+      title: 'Withdraw anytime',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    },
+    {
+      title: 'Secure & insured',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    },
+    {
+      title: 'Easy to use',
+      description: 'Connect our AI to your exchange account and invest crypto automatically. Toka app works while you just live.'
+    }
+  ];
 
 const HomePage = () => {
     const handleAppStoreClick = () => {
@@ -121,8 +147,8 @@ const HomePage = () => {
         <div>
         <div className="  p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
       <div className="w-full md:w-1/2">
-        <h3 className="text-blue-400 uppercase font-semibold">Benefits</h3>
-        <h2 className="text-4xl font-bold my-4">Simple, Fast & Secure</h2>
+        <h3 className=" uppercase font-semibold py-1 border w-fit px-2 rounded-2xl bg-gray-800 text-white">Benefits</h3>
+        <h2 className="text-4xl font-bold my-4 w-fit bg-gradient-to-b from-blue-500 to-gray-900 bg-clip-text text-transparent">Simple, Fast & Secure</h2>
         <p className="text-gray-400 mb-6"> </p>
         <div className="flex flex-col gap-4">
           {benefits.map((benefit, index) => (
@@ -139,6 +165,31 @@ const HomePage = () => {
         </div>
         <FillPe/>
         <Ourservices/>
+        <div className=" text-white my-5 flex items-center justify-center p-6">
+      <div className="max-w-5xl w-full">
+        <h1 className="text-3xl  md:text-5xl font-bold bg-gradient-to-b capitalize  from-blue-500 to-gray-900 py-2 text-center bg-clip-text text-transparent mb-4">
+          Main Advantages
+        </h1>
+        <p className="text-center text-lg text-gray-400 mb-12">
+          Connect our FillPay Let's start to fill a bills and recharge and get up to 50% cashback Rewards 
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {advantages.map((advantage, index) => (
+            <div
+              key={index}
+              className="bg-gray-800 rounded-2xl p-6 shadow-lg text-center flex flex-col items-center"
+            >
+              <div className="text-blue-400  text-3xl mb-4">
+                <FaRegStar className='fill-blue-500'/>
+              </div>
+              <h2 className="text-xl font-semibold mb-2">{advantage.title}</h2>
+              <p className="text-gray-400 text-sm">{advantage.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+        </div>
     </div>
   )
 }

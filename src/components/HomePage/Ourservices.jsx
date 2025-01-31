@@ -129,21 +129,21 @@ const Ourservices = () => {
     <div className="min-h-screen bg-gray-50 p-4 md:p-12">
       <div className="w-11/12  mx-auto flex flex-col  gap-2">
         <div className="lg:px-12 mt-5">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
-            Integrated suite of payments products
+          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-b py-2 capitalize  from-blue-500 to-gray-900 bg-clip-text text-transparent mb-4">
+            Integrated suite of Payments products
           </h2>
           <p className="text-gray-600 mb-6 lg:max-w-md w-full text-justify">
             Magnis id dictum vehicula laoreet scelerisque varius cubilia ornare,
             sociosqu massa semper habitasse nostra lobortis risus morbi platea.
           </p>
           <div className="flex lg:flex-row flex-col justify-between   ">
-            <button className="bg-blue-600 py-3 px-6 border text-white  w-fit h-fit my-auto rounded-lg shadow-md">
+            <button className="bg-gray-900 py-3 px-6 border text-white  w-fit h-fit my-auto rounded-lg shadow-md">
               Download Now
             </button>
             <div className="flex lg:gap-x-10 gap-x-4 max-sm:mt-10 max-sm:text-sm  transition-all duration-200 ease-linear">
-              <button className={`${status === "Bills" && " bg-gray-200 px-5 py-2 rounded-md text-blue-500 font-medium text-lg "} `} onClick={() => setStatus('Bills')}>Utility Bills</button>
-              <button className={`${status === "Booking" && " bg-gray-200 px-5 py-2 rounded-md text-blue-500 font-medium text-lg"} `} onClick={() => setStatus('Booking')}>Booking</button>
-              <button className={`${status === "Financial" && " bg-gray-200 px-5 py-2 rounded-md text-blue-500 font-medium text-lg"} `} onClick={() => setStatus('Financial')}>Financial & Tax</button>
+              <button className={`${status === "Bills" && " bg-gray-900 px-5 py-2 rounded-md text-white   " } border px-5 py-2 hover:text-white hover:bg-gray-900 `} onClick={() => setStatus('Bills')}>Utility Bills</button>
+              <button className={`${status === "Booking" && " bg-gray-900 px-5 py-2 rounded-md text-white  "}   border px-5 py-2 hover:text-white hover:bg-gray-900`} onClick={() => setStatus('Booking')}>Booking</button>
+              <button className={`${status === "Financial" && " bg-gray-900 px-5 py-2 rounded-md text-white  "}   border px-5 py-2 hover:text-white hover:bg-gray-900`} onClick={() => setStatus('Financial')}>Financial & Tax</button>
             </div>
           </div>
         </div>

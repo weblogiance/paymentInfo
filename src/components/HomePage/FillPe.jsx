@@ -32,7 +32,7 @@ const FillPe = () => {
   return (
     <div className=''>
         <div className='w-11/12 mx-auto my-20'>
-            <h1 className=' max-sm:text-2xl max-sm:leading-10 text-5xl text-center tracking-wide font-bold bg-gradient-to-t to-blue-800 from-blue-500 w-fit mx-auto text-transparent bg-clip-text'>Accept Payments at Zero Cost with FillPe</h1>
+            <h1 className=' max-sm:text-2xl max-sm:leading-10 text-5xl text-center tracking-wide font-bold bg-gradient-to-b from-blue-500 to-gray-900 z-[2] w-fit mx-auto text-transparent bg-clip-text'>Accept Payments at Zero Cost with FillPe</h1>
             <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-2  gap-8 lg:mt-20 mt-10'>
                 {
                     about.map((item,index)=>(
@@ -57,8 +57,6 @@ const FillPe = () => {
                           </h1>
                           <p className="max-w-md text-justify text-sm sm:text-base">{item.description}</p>
                         </div>
-          
-          
                       </div>
                     ))
                 }
